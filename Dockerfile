@@ -8,7 +8,7 @@ FROM matthieudelaro/caffe-ready-ubuntu-pip:latest
 ENV CAFFE_ROOT /opt/caffe
 ENV PATH $CAFFE_ROOT/tools:$PATH
 
-RUN pip install scikit-learn>=0.14.1 -y  # dependency of caffe which is really long to build
+RUN pip install scikit-learn>=0.14.1  # dependency of caffe which is really long to build
 RUN apt-get install nano -y  # because no, vim is not installed, and yes, I'm lost in vi
 
 # Clone the Caffe repo
