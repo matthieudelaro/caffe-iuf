@@ -29,7 +29,7 @@ RUN cd $CAFFE_ROOT && \
   mkdir build && \
   # cd build && \
   # cmake .. && \
-  cmake . \
+  cmake . && \
   make all -j8
 
 # Add ld-so.conf so it can find libcaffe.so
