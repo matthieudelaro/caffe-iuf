@@ -9,7 +9,7 @@ ENV CAFFE_ROOT /opt/caffe
 ENV PATH $CAFFE_ROOT/tools:$PATH
 
 RUN pip install scikit-learn>=0.14.1  # dependency of caffe which is really long to build
-RUN apt-get install nano -y  # because no, vim is not installed, and yes, I'm lost in vi
+RUN apt-get install nano -y  # because no, vim is not installed, and yes, I am lost in vi
 
 # Clone the Caffe repo
 RUN cd /opt && git clone https://github.com/matthieudelaro/caffe $CAFFE_ROOT
@@ -29,7 +29,7 @@ RUN cd $CAFFE_ROOT && \
   mkdir build && \
   # cd build && \
   # cmake .. && \
-  cmake .
+  cmake . \
   make all -j8
 
 # Add ld-so.conf so it can find libcaffe.so
